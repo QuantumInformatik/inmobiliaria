@@ -12,7 +12,7 @@ body{
     font-size: 15px;
    font-family: 'Roboto', sans-serif;
 }
-/* Fila y columna de Grillas. Desde lo celulares hasta PCs */
+/* Fila y columna de Grillas. Desde los celulares hasta PCs */
 .row::after {
     content: "";
     clear: both;
@@ -27,21 +27,23 @@ body{
 [class*="col-"] {
     width: 100%;
 }
+.prueba1, .prueba2{display: none;}
 .login-seccion{
+    border: 1px solid red;
     width: 100%;
-    padding: 25px;
-    margin: auto;
-    -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+    padding: 0 auto;
+    margin: 100px 0 0 0;
+    /* -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
     -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
     border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
     background-color: #ffffff; 
     -webkit-box-shadow: 4px 5px 8px rgba(0,0,0,.25); 
     -moz-box-shadow: 4px 5px 8px rgba(0,0,0,.25); 
-    box-shadow: 4px 5px 8px rgba(0,0,0,.25); 
+    box-shadow: 4px 5px 8px rgba(0,0,0,.25);  */
 }
 
 .login-seccion:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -88,14 +90,13 @@ input[type=submit]:hover {
 }
 
 .container {
-    /* border:2px solid red; */
+    border: 2px solid red;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     
-  }
- 
+  } 
   @media  screen and (min-width: 470px) {
     .container {
       width: 100%;
@@ -133,9 +134,7 @@ input[type=submit]:hover {
     .registrarse{
         float: right;
         padding-top: 16px;
-    }
-  
-      
+    }  
   }
   @media  screen and (min-width: 992px) {
     .container {
