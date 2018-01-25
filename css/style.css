@@ -3,201 +3,253 @@ Margin: espacio de un elemento desde el borde hacia otro elemento, i.e el espaci
 max-width: pantalla menor o igual al valor dado.
 min-width: pantalla mayor o igual a valor dado.
 */
+@import url("input.css");
+
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+		 box-sizing: border-box;
 }
+
 body{
-    font-size: 15px;
-   font-family: 'Roboto', sans-serif;
+	background:#fff;
+    color:#292727;
+	direction:ltr;
+    font-family:'Roboto',sans-serif;
+    font-size:14px;
+    line-height:20px;
+    margin:0;
+    padding:0
 }
-/* Fila y columna de Grillas. Desde los celulares hasta PCs */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+  body,input,textarea,select,button {
+    color:#292727;
+    font-family:roboto,arial,sans-serif
+   }
+ 
 
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-
-[class*="col-"] {
-    width: 100%;
-}
-.prueba1, .prueba2{display: none;}
-.login-seccion{
-    border: 1px solid red;
-    width: 100%;
-    padding: 0 auto;
-    margin: 100px 0 0 0;
-    /* -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-    -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
-    border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-    background-color: #ffffff; 
-    -webkit-box-shadow: 4px 5px 8px rgba(0,0,0,.25); 
-    -moz-box-shadow: 4px 5px 8px rgba(0,0,0,.25); 
-    box-shadow: 4px 5px 8px rgba(0,0,0,.25);  */
-}
-
-.login-seccion:hover {
-    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-}
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-
-   
-}
-input[type=text]:focus, input[type=password]:focus {
-    border-bottom: 3px solid red;
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #f75462;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #f04949;
-}
-#recuperarPass{
-    width: 100%;
-    background-color: #d17d84;
-    color: white;
-    float: none;
-    padding-top: 16px;
-}
-.registrarse{
-    display: block;
-       float: none;
-}
-
-.container {
-    border: 2px solid red;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+   @media all and (min-width:601px) {
+    .dimPan {
+     display:-webkit-box;
+     display:-moz-box;
+     display:-ms-flexbox;
+     display:-webkit-flex;
+     display:flex;
+     flex-direction:column;
+     min-height:100vh;
+     position:relative;
+    }
     
-  } 
-  @media  screen and (min-width: 470px) {
-    .container {
-      width: 100%;
+
+    .dimPan:before,.dimPan:after {
+     box-flex:1;
+     flex-grow:1;
+     content:'';
+     display:block;
+     height:24px
     }
-    body{
-        background-color: black;
+    .dimPan:before {
+     min-height:30px
     }
-    .login-seccion{
-        width: 100%;
+    .dimPan:after {
+     min-height:24px
     }
-    #recuperarPass{
-    width: auto;
-    padding: 10px 18px;
+    .dimPan.cajPrin:after {
+     min-height:64.8px
     }
-    .registrarse{
-        float: right;
-        padding-top: 16px;
+   }
+.LJtPoc {
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:flex;
+    flex-direction:column;
+    background:#fff;
+    box-sizing:border-box;
+    max-width:100%;
+    position:relative;
+    z-index:2;
+   }
+
+.cajPrin .LJtPoc {
+    min-height:100vh
+   }
+
+@media all and (min-width:601px) {
+    .cajPrin .LJtPoc {
+     min-height:0;
     }
-      
-  }
-  @media screen and (min-width: 768px) {
-    .container {
-      width: 750px;
+    .LJtPoc,.bdf4dc { ---
+     transition:.2s;
     }
-    .login-seccion{
-        width: 100%;
+    .LJtPoc {
+     flex-shrink:0;
+     background:#dbfefa;
+     -moz-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+     box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+     display:block;
+     margin:0 auto;
+     min-height:0;
+     width:450px
     }
-    body{
-        background-color: orange;
+    .LJtPoc.qmmlRd {
+     width:450px;
     }
-    #recuperarPass{
-        width: auto;
-    padding: 10px 18px;
+   }
+ @media all and (min-width:601px) {
+    .qmmlRd .bdf4dc {
+     height:auto;
+     min-height:470px;
     }
-    .registrarse{
-        float: right;
-        padding-top: 16px;
-    }  
-  }
-  @media  screen and (min-width: 992px) {
-    .container {
-      width: 970px;
+   }
+ @media all and (min-width:601px) and (orientation:landscape) {
+    .LJtPoc.v7usYb {
+     width:450px
     }
-    .login-seccion{
-        width: 60%;
+    .v7usYb .bdf4dc {
+     height:auto;
+     min-height:500px
     }
-    body{
-        background-color: red;
+   }
+   .LJtPoc .c8DD0,.LJtPoc .IdAqtf {
+    position:fixed
+   }
+   @media all and (min-width:601px) {
+    .LJtPoc .c8DD0,.LJtPoc .IdAqtf {
+     position:absolute
     }
-    #recuperarPass{
-        width: auto;
-        padding: 10px 18px;
+   }
+ .bdf4dc {
+    box-flex:1;
+    flex-grow:1;
+    box-sizing:border-box;
+    overflow:hidden;
+    padding:24px 24px 36px
+   }
+   .bdf4dc.nnGvjf {
+    overflow:visible;
+    position:relative;
+    z-index:1
+   }
+ .nnGvjf .RFjuSb {
+    overflow:visible
+   }
+ @media all and (min-width:450px) {
+    .bdf4dc {
+     padding:48px 40px 36px;
     }
-    .registrarse{
-        float: right;
-        padding-top: 16px;
+   }
+   @media all and (min-width:601px) {
+    .bdf4dc {
+     height:auto;
+     min-height:500px;
+     overflow-y:auto;
     }
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-    
-  }
-  @media screen and (min-width: 1200px) {
-    .container {
-      width: 1170px;
+   }
+ .bxPAYd {
+    margin:auto -24px
+   }
+   @media all and (min-width:450px) {
+    .bxPAYd {
+     margin:auto -40px;
     }
-    .login-seccion{
-        width: 60%;
+   }
+ .k6Zj8d {
+    padding-left:24px;
+    padding-right:24px
+   }
+   @media all and (min-width:450px) {
+    .k6Zj8d {
+     padding-left:40px;
+     padding-right:40px
     }
-    #recuperarPass{
-        width: auto;
-        padding: 10px 18px;
+   }
+
+.dimPan~.nY5oDd,.dimPan~.nY5oDd .jveIPe { ----
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:flex;
+    flex-direction:column
+   }
+   .dimPan~.nY5oDd {
+    -moz-border-radius:2px;
+    border-radius:2px;
+    color:#757575;
+    font-size:14px;
+    line-height:1.5;
+    min-height:240px;
+    width:280px
+   }
+   .dimPan~.nY5oDd.nDmuSb {
+    width:auto
+   }
+   .dimPan~.nY5oDd .jE5rrf {
+    color:#212121;
+    font-size:16px;
+    font-weight:500;
+    margin-bottom:24px
+   }
+   .dimPan~.nY5oDd .z2Z95 {
+    color:#f44336
+   }
+   .dimPan~.nY5oDd .jE5rrf:empty {
+    margin:0
+   }
+   .dimPan~.nY5oDd .fuqAvf {
+    box-flex:1;
+    flex-grow:1;
+    padding:24px 24px 12px
+   }
+   .dimPan~.nY5oDd .jE5rrf:empty~.RUor5 {
+    font-size:16px
+   }
+   .dimPan~.nY5oDd .RUor5>:first-child {
+    margin-top:0
+   }
+   .dimPan~.nY5oDd .RUor5>:last-child {
+    margin-bottom:0
+   }
+   .dimPan~.nY5oDd .jveIPe {
+    align-items:flex-end;
+    padding:0 16px 12px;
+    text-align:right
+   }
+   .dimPan~.nY5oDd.nDmuSb .jveIPe {
+    background:#fafafa;
+    display:block;
+    padding-bottom:0;
+    position:relative
+   }
+   .dimPan~.nY5oDd .x81T2e {
+    -moz-border-radius:2px;
+    border-radius:2px;
+    padding:12px
+   }
+   .dimPan~.nY5oDd .x81T2e:focus {
+    background-color:rgba(0,0,0,0.12)
+   }
+@media all and (min-width:601px){
+	 .RAYh1e.qmmlRd {
+     width:450px
     }
-    .registrarse{
-        float: right;
-        padding-top: 16px;
+	
+}
+  @media all and (min-width:601px) {
+    .RAYh1e.qmmlRd .xkfVF {
+     height:auto;
+     min-height:500px
     }
-    body{
-        background-color: blue;
-    }
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }
-  
+   }
+.RFjuSb {
+    overflow:hidden
+   }
+
+
+ 
+
+
+
+ 
 
