@@ -1,5 +1,11 @@
-<?php session_start();
-session_destroy(); ?>
+<?php 
+require_once 'piechpi/login.php';
+if(isset($_SESSION['id'])){
+    $objCerrar = new Login();
+    $objCerrar->cerrandoEnReversa();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es-ES">
 <head>

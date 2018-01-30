@@ -16,13 +16,13 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-    border-bottom: 3px solid #ff0000;
+    border-bottom: 3px solid #5cb85c;
     width: 100%;  
 }
 
 input[type=submit] {
     width: 100%;
-    background-color: #f75462;
+    background-color: #5cb85c;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -32,16 +32,16 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #f04949;
+    background-color: #56c556;
 }
 #recuperarPass{
     width: 100%;
-    background-color: #f75462;
+    background-color: #292b2c;
     color: white;
     float: none;
     padding-top: 16px;
 }
-#recuperarPass:hover{background-color: #f04949;}
+#recuperarPass:hover{background-color: #3d4142;}
 .registrarse{
 	width: 100%;
 	

@@ -4,8 +4,7 @@ require_once 'conexion.php';
 class Login{
     private $user;
     private $pass;
-    //public $nom;
-
+    
     public function acceso(){
         try{
             if(!empty($_POST['username']) and !empty($_POST['password'])){
@@ -27,6 +26,7 @@ class Login{
                         $_SESSION["pass"]=$datos[0]->usuarioPASS;
                         $_SESSION["nom"]=$datos[0]->usuarioNOM;
                         $_SESSION["est"]=$datos[0]->usuarioEST; 
+                        // ini_set('session.cookie_lifetime=0');
                         $datosJson[] = array('user'=>$_SESSION["user"],'pass' =>$_SESSION["pass"],'nom' =>$_SESSION["nom"],'est' =>$_SESSION["est"],'sesion'=>'1');
                     }else{
                         $datosJson[]=array('sesion'=>'3');
@@ -47,7 +47,6 @@ class Login{
         }
     }
 
-
     public function bienvenidoAdmin(){
         session_start();
         if(empty($_SESSION['user']) OR empty($_SESSION['pass'])){ 
@@ -59,13 +58,21 @@ class Login{
     }
 
     public function cerrarAdmin(){
+        $this->actualizarEstadoUsuario();
+        header("location:../index");
+    }
+    public function cerrandoEnReversa(){
+        $this->actualizarEstadoUsuario();
+    }
+
+    public function actualizarEstadoUsuario(){
         $bd  =  new Conexion();
         session_start();
         $newEst = $_SESSION['id'];
         $bd->query("UPDATE tblusuarios SET usuarioEST=0 WHERE usuarioID='$newEst' ");
         unset($_SESSION['id'],$_SESSION['user'],$_SESSION['pass'],$_SESSION['nom'],$_SESSION['est']);
         session_destroy();
-        header("location:../index");
+
     }
 
 }
