@@ -44,8 +44,7 @@ input[type=submit]:hover {
 #recuperarPass:hover{background-color: #f04949;}
 .registrarse{
 	width: 100%;
-	background-color: #f75462;
-	border: 1px solid #f75462;
+	
 	margin-top: 20px;
     display: block;
     float: none;
